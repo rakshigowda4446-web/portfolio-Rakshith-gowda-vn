@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* ------------------ GLOBAL ------------------ */
+    /* -------- GLOBAL -------- */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    
     body {
-      background: linear-gradient(135deg, #0F172A, #020617);
+      background: linear-gradient(120deg, #0F172A, #020617);
       color: #E5E7EB;
-      line-height: 1.6;
     }
 
     a {
       text-decoration: none;
-      color: inherit;
+      color: white;
     }
 
     section {
@@ -31,41 +32,27 @@
     }
 
     h1, h2 {
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    h2 {
       color: #38BDF8;
-      font-size: 2.3rem;
+      margin-bottom: 15px;
     }
 
-    p {
-      color: #CBD5F5;
-    }
-
-    /* ------------------ NAVBAR ------------------ */
+    /* -------- NAVBAR -------- */
     nav {
       position: fixed;
       top: 0;
       width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      backdrop-filter: blur(10px);
+      background: rgba(2, 6, 23, 0.9);
       padding: 15px 10%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      z-index: 1000;
-    }
-
-    nav h3 {
-      color: #38BDF8;
-      letter-spacing: 1px;
+      backdrop-filter: blur(10px);
+      z-index: 100;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
+      list-style: none;
       gap: 25px;
     }
 
@@ -73,9 +60,9 @@
       color: #38BDF8;
     }
 
-    /* ------------------ HERO ------------------ */
+    /* -------- HERO -------- */
     .hero {
-      min-height: 100vh;
+      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -87,23 +74,17 @@
     }
 
     .hero-text span {
-      color: #38BDF8;
+      color: #A855F7;
     }
 
     .hero-text button {
-      margin-top: 25px;
+      margin-top: 20px;
       padding: 12px 30px;
+      border-radius: 25px;
       border: none;
-      border-radius: 30px;
       background: linear-gradient(135deg, #38BDF8, #A855F7);
       color: white;
-      font-size: 1rem;
       cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .hero-text button:hover {
-      transform: scale(1.05);
     }
 
     .hero-card {
@@ -111,26 +92,86 @@
       padding: 40px;
       border-radius: 20px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-      animation: float 4s ease-in-out infinite;
     }
 
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
-    }
-
-    /* ------------------ ABOUT ------------------ */
-    .about {
-      background: #020617;
-      border-radius: 30px;
-      padding: 60px;
-    }
-
-    /* ------------------ SKILLS ------------------ */
-    .skills-grid {
+    /* -------- SKILLS -------- */
+    .skills {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 25px;
       margin-top: 40px;
     }
+
+    .skill {
+      background: #0F172A;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(56,189,248,0.4);
+    }
+
+    /* -------- FOOTER -------- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      color: #94A3B8;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h3>MyPortfolio</h3>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Your Name</span></h1>
+      <p>Frontend Developer & Designer</p>
+      <button>Download CV</button>
+    </div>
+
+    <div class="hero-card">
+      <h2>About Me</h2>
+      <p>
+        I build clean, responsive, and modern websites using HTML, CSS,
+        and JavaScript.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React</div>
+      <div class="skill">UI/UX</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Your Name
+  </footer>
+
+</body>
+</html>
