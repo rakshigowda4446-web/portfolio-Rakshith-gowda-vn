@@ -1,54 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Resume - Rakshith Gowda VN</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        .resume {
-            max-width: 800px;
-            background: #ffffff;
-            margin: auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        .section {
-            margin-top: 20px;
-        }
-        .section h2 {
-            border-bottom: 2px solid #333;
-            padding-bottom: 5px;
-            color: #333;
-        }
-        p {
-            line-height: 1.6;
-        }
-    </style>
-</head>
-<body>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="resume">
-    <h1>Rakshith Gowda VN</h1>
+  <style>
+    /* ------------------ GLOBAL ------------------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    <div class="section">
-        <h2>Personal Details</h2>
-        <p><strong>Age:</strong> 22</p>
-        <p><strong>Phone:</strong> 8431735278</p>
-        <p><strong>Email:</strong> rr7148737@gmail.com</p>
-    </div>
+    
+    body {
+      background: linear-gradient(135deg, #0F172A, #020617);
+      color: #E5E7EB;
+      line-height: 1.6;
+    }
 
-    <div class="section">
-        <h2>Objective</h2>
-        <p>
-            Motivated and enthusiastic individual seeking an opportunity to apply my skills
-            and gr
- 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    section {
+      padding: 80px 10%;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #38BDF8;
+      font-size: 2.3rem;
+    }
+
+    p {
+      color: #CBD5F5;
+    }
+
+    /* ------------------ NAVBAR ------------------ */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav h3 {
+      color: #38BDF8;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a:hover {
+      color: #38BDF8;
+    }
+
+    /* ------------------ HERO ------------------ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    .hero-text span {
+      color: #38BDF8;
+    }
+
+    .hero-text button {
+      margin-top: 25px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(135deg, #38BDF8, #A855F7);
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .hero-text button:hover {
+      transform: scale(1.05);
+    }
+
+    .hero-card {
+      background: #020617;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* ------------------ ABOUT ------------------ */
+    .about {
+      background: #020617;
+      border-radius: 30px;
+      padding: 60px;
+    }
+
+    /* ------------------ SKILLS ------------------ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
